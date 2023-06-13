@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Create Post </title>
+    </head>
+    <style>
+        body{
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+        }
+        form{
+            padding: 20px;
+        }
+        input{
+            padding: 10px;
+            width: 300px;
+            border: 1px solid black;
+            display: block;
+            margin: 10px 0px;
+        }
+        button {
+            width: 300px;
+            border-radius: 10px;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            margin: 10px 0px;
+        }
+    </style>
+    <body>
+        <form action="/predict" method = "POST" content-type = "application/json">
+            <input name = "name" type = "text" required = "true" placeholder = "enter your name" />
+            <input name = "description" type = "text" required = "true" placeholder = "enter job title" />
+            <input name = "id" type = "number" required = "true" placeholder = "enter your id or ignore" />
+            <input name = "cgpa" type = "number" required = "true" placeholder = "enter cgpa" />
+            <input name = "placement_exam_marks" type = "number" required = "true" placeholder = "enter scored placement exam marks" />
+            <button type = "submit"> Submit </button> 
+        </form>
+    </body>
+</html>

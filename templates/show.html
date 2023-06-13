@@ -1,0 +1,32 @@
+<head>
+    <title>POST Page </title>
+</head>
+<style>
+    .success_message {
+        background-color: green;
+        color: white;
+        border: 1px solid white;
+        padding: 20px 50px;
+        margin: 10px 0px;
+    }
+    .fail_message {
+        background-color: red;
+        color: white;
+        border: 1px solid white;
+        padding: 20px 50px;
+        margin: 10px 0px;
+    }
+</style>
+<body>
+    <h1>Result Page</h1>
+    <p>It is result page</p>
+    <h3> HI {{name}} {{prediction}} </h3>
+    {% if prediction * 100 > 45 %}
+        <p class = "success_message"> CONGRATS! You are eligible ! </p>
+    {% else %}
+        <p class = "fail_message"> SORRY! You are not eligible! </p>
+    {% endif %}
+    <p>your chances to get job as {{job}} are {{prediction * 100}} % </p>
+    <p>
+    </p>
+</body>
